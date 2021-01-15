@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 async function runInstall(siteName) {
   const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
-  await page.goto(`https://${siteName}.azurewebsites.net/wp-login.php`);
+  await page.goto(`https://${siteName}.azurewebsites.net/`);
   await Promise.all([
       page.waitForNavigation(),
       page.click('#language-continue')
