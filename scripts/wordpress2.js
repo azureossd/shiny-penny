@@ -9,8 +9,15 @@ async function runInstall(siteName) {
       page.click('#language-continue')
   ]);
   await page.type('#weblog_title', 'AppService.L200.OSS.WordPress.1');
+  await page.focus("#user_login");
   await page.type('#user_login', 'azuser');
-  await page.type('#pass1-text', 'Micr0s0ft');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Backspace');
+  await page.keyboard.type('Micr0s0ft');
+
+  await page.waitForSelector("input.pw-checkbox");
+  await page.click("input.pw-checkbox");
+
   await page.type('#admin_email', 'azuser@example.com');
   await Promise.all([
       page.waitForNavigation(),
