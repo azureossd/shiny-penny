@@ -9,7 +9,7 @@
   "author": "Christopher Maldonado <chmald@microsoft.com>",
   "dependencies": {
     "body-parser": "^1.20.4",
-    "chrome-launcher": "^0.13.4",
+    "chrome-launcher": "^1.2.1",
     "express": "^4.22.1",
     "pug": "^3.0.4",
     "puppeteer": "^5.5.0"
